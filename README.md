@@ -3,6 +3,8 @@
 
 Pablo García del Moral
 
+Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
+
 ## Capturas de Fauna de principio de la practica:
 *Home*
 <img src='/capturas/homeFauna.png' withd='200px'>
@@ -13,7 +15,319 @@ Pablo García del Moral
 *Coleccion*
 <img src='/capturas/coleccionFauna.png' withd='200px'>
 
-Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
+## Documentos creados en Fauna:
+{
+  "ref": Ref(Collection("Competidores"), "358542902268264653"),
+  "ts": 1678729872260000,
+  "data": {
+    "name": "Javier Fernandez",
+    "birthdate": {
+      "day": 12,
+      "month": 5,
+      "year": 1998
+    },
+    "country": "España",
+    "club": "Club Piragüismo Pontevedra",
+    "yearsWin": [
+      2017,
+      2019
+    ],
+    "participation": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021
+    ],
+    "timesOlimpic": 1
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359106945417740493"),
+  "ts": 1678729920700000,
+  "data": {
+    "name": "Sara Lopez",
+    "birthdate": {
+      "day": 28,
+      "month": 9,
+      "year": 1994
+    },
+    "country": "España",
+    "club": "Club Náutico Sevilla",
+    "yearsWin": [
+      2018,
+      2022
+    ],
+    "participation": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359106994243633357"),
+  "ts": 1678729967270000,
+  "data": {
+    "name": "Luisa Martinez",
+    "birthdate": {
+      "day": 17,
+      "month": 6,
+      "year": 2001
+    },
+    "country": "España",
+    "club": "Club Náutico Banyoles",
+    "yearsWin": [
+      2019,
+      2021
+    ],
+    "participation": [
+      2018,
+      2019,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107194198687949"),
+  "ts": 1678730157966000,
+  "data": {
+    "name": "Maria Lopez",
+    "birthdate": {
+      "day": 11,
+      "month": 7,
+      "year": 1998
+    },
+    "country": "España",
+    "club": "C.N. Oliva",
+    "yearsWin": [
+      2020,
+      2022
+    ],
+    "participation": [
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 1
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107227678671053"),
+  "ts": 1678730189880000,
+  "data": {
+    "name": "Carlos Perez",
+    "birthdate": {
+      "day": 2,
+      "month": 4,
+      "year": 1995
+    },
+    "country": "Portugal",
+    "club": "Clube Naval Setubalense",
+    "yearsWin": [
+      2017,
+      2019
+    ],
+    "participation": [
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "timesOlimpic": 1
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107262378148044"),
+  "ts": 1678730222980000,
+  "data": {
+    "name": "Sofia Gomez",
+    "birthdate": {
+      "day": 18,
+      "month": 9,
+      "year": 2001
+    },
+    "country": "España",
+    "club": "C.D. Aranjuez",
+    "yearsWin": [
+      2020
+    ],
+    "participation": [
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107292163997901"),
+  "ts": 1678730251390000,
+  "data": {
+    "name": "Hugo Gonzalez",
+    "birthdate": {
+      "day": 25,
+      "month": 6,
+      "year": 1997
+    },
+    "country": "España",
+    "club": "C.N. Altea",
+    "yearsWin": [
+      2018,
+      2022
+    ],
+    "participation": [
+      2017,
+      2018,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107320870863053"),
+  "ts": 1678730278760000,
+  "data": {
+    "name": "Paola Fernandez",
+    "birthdate": {
+      "day": 13,
+      "month": 2,
+      "year": 1999
+    },
+    "country": "España",
+    "club": "C.D. Sevilla",
+    "yearsWin": [
+      2021
+    ],
+    "participation": [
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107351425319117"),
+  "ts": 1678730307900000,
+  "data": {
+    "name": "Andres Sanchez",
+    "birthdate": {
+      "day": 27,
+      "month": 12,
+      "year": 1994
+    },
+    "country": "España",
+    "club": "C.N. Vilanova",
+    "yearsWin": [
+      2019,
+      2022
+    ],
+    "participation": [
+      2017,
+      2018,
+      2019,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107376180101325"),
+  "ts": 1678730331510000,
+  "data": {
+    "name": "Elena Rodriguez",
+    "birthdate": {
+      "day": 9,
+      "month": 1,
+      "year": 2000
+    },
+    "country": "España",
+    "club": "C.N. Banyoles",
+    "yearsWin": [
+      2020
+    ],
+    "participation": [
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107434033184972"),
+  "ts": 1678730386680000,
+  "data": {
+    "name": "Pablo Martin",
+    "birthdate": {
+      "day": 8,
+      "month": 11,
+      "year": 1997
+    },
+    "country": "España",
+    "club": "Club Piragüismo Tajo",
+    "yearsWin": [
+      2019,
+      2021
+    ],
+    "participation": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 0
+  }
+}
+
+{
+  "ref": Ref(Collection("Competidores"), "359107462811353292"),
+  "ts": 1678730414120000,
+  "data": {
+    "name": "Ana Gomez",
+    "birthdate": {
+      "day": 15,
+      "month": 2,
+      "year": 1999
+    },
+    "country": "Portugal",
+    "club": "Clube de Canoagem de Setúbal",
+    "yearsWin": [
+      2018,
+      2020
+    ],
+    "participation": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022
+    ],
+    "timesOlimpic": 1
+  }
+}
 
 ## Arquitectura de la aplicación
 
