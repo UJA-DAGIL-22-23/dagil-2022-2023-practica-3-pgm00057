@@ -4,12 +4,14 @@
 Pablo García del Moral
 
 ## Capturas de Fauna de principio de la practica:
-* Home
+*Home*
 <img src='/capturas/homeFauna.png' withd='200px'>
-* Inicio Base de Datos
-<img src='/capturas/homeFauna.png' withd='200px'>
-* Coleccion
-<img src='/capturas/homeFauna.png' withd='200px'>
+
+*Inicio Base de Datos*
+<img src='/capturas/bdFauna.png' withd='200px'>
+
+*Coleccion*
+<img src='/capturas/coleccionFauna.png' withd='200px'>
 
 Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
 
