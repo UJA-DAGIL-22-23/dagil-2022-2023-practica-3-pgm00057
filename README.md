@@ -4,7 +4,7 @@
 Pablo García del Moral
 
 *Capturas de Fauna de principio de la practica:
-(./capturas/homeFauna.png)
+<img src='/capturas/homeFauna.png' withd='200px'>
 
 Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
 
