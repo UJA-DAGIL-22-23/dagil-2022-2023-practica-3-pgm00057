@@ -7,13 +7,13 @@ Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
 
 ## Capturas de Fauna de principio de la practica:
 *Home*
-<img src='/capturas/homeFauna.png' withd='200px'>
+<img src='assets/capturas/homeFauna.png' withd='200px'>
 
 *Inicio Base de Datos*
-<img src='/capturas/bdFauna.png' withd='200px'>
+<img src='assets/capturas/bdFauna.png' withd='200px'>
 
 *Coleccion*
-<img src='/capturas/coleccionFauna.png' withd='200px'>
+<img src='assets/capturas/coleccionFauna.png' withd='200px'>
 
 ## Documentos creados en Fauna:
 {
