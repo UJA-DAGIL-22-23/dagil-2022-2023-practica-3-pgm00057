@@ -14,7 +14,7 @@ const faunadb = require('faunadb'),
     q = faunadb.query;
 
 const client = new faunadb.Client({
-    secret: 'fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K',
+    secret: 'fnAE_CQMVZAAzHV1A5Ck-_vLbvxcJGhmusbODKp7',
 });
 
 const COLLECTION = "Competidores"
@@ -93,9 +93,9 @@ const CB_OTHERS = {
         try {
             CORS(res).status(200).json({
                 mensaje: "Microservicio MS Plantilla: acerca de",
-                autor: "¿¿¿ AUTOR ???",
-                email: "¿¿¿ EMAIL ???",
-                fecha: "¿¿¿ FECHA ???"
+                autor: "Pablo García del Moral",
+                email: "pgm00057@red.ujaen.es",
+                fecha: "14/03/2023"
             });
         } catch (error) {
             CORS(res).status(500).json({ error: error.description })
