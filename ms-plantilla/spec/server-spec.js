@@ -23,7 +23,7 @@ describe('Servidor PLANTILLA:', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(function (res) {
-          console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+          //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
           assert(res.body.hasOwnProperty('mensaje'));
           assert(res.body.mensaje === "Microservicio MS Plantilla: home");
 
@@ -67,6 +67,26 @@ describe('Servidor PLANTILLA:', () => {
     });
 
   })
+
+  /**
+   * Test descarga personas BBDD
+   */
+  describe('Descarga PERSONAS:', () => {
+    it('Devuelve TODAS las PERSONAS de laa BD,', (done) => {
+      supertest(app)
+        .get('/getPersonas')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          console.log( res.body.data )
+          assert(res.body.data[0].data.hasOwnProperty('name'));
+        })
+        .end((error) => { error ? done.fail(error) : done(); }
+        );
+    });
+
+  })
+
 });
 
 

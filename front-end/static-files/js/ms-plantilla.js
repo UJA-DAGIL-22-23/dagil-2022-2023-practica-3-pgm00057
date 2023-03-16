@@ -92,6 +92,22 @@ Plantilla.mostrarAcercaDe = function (datosDescargados) {
     Frontend.Article.actualizar("Plantilla Acerca de", mensajeAMostrar)
 }
 
+Plantilla.mostrarGetPersonas = function (datosDescargados) {
+
+    const mensajeAMostrar = `<div>
+    <ul>
+        <li><b>Nombre</b>: ${datosDescargados.data[0].data.name}</li>
+        <li><b>Pais</b>: ${datosDescargados.data[0].data.country}</li>
+        <li><b>Club</b>: ${datosDescargados.data[0].data.club}</li>
+        <li><b>Años Victorias</b>: ${datosDescargados.data[0].data.yearsWin}</li>
+        <li><b>Particiacion</b>: ${datosDescargados.data[0].data.participation}</li>
+        <li><b>Veces Olimpico/a</b>: ${datosDescargados.data[0].data.timesOlimpic}</li>
+    </ul>
+    </div>
+    `;
+    Frontend.Article.actualizar("Plantilla Acerca de", mensajeAMostrar)
+}
+
 
 /**
  * Función principal para responder al evento de elegir la opción "Home"
@@ -107,5 +123,11 @@ Plantilla.procesarAcercaDe = function () {
     this.descargarRuta("/plantilla/acercade", this.mostrarAcercaDe);
 }
 
+/**
+ * Funcion para listar a las personas.
+ */
+Plantilla.procesarGetPersonas = function() {
+    this.descargarRuta("/plantilla/getPersonas", this.mostrarGetPersonas);
+}
 
 

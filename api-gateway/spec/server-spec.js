@@ -39,6 +39,18 @@ describe('API Gateway: rutas estáticas', () => {
         })
         .end((error) => { error ? done.fail(error) : done() })
     });
+    it('Devuelve las Personas de BD', (done) => {
+      supertest(app)
+        .get('/plantilla/getPersonas')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          //console.log( res.body.data ); // Para comprobar qué contiene exactamente res.body.data
+          assert(res.body.data[0].data.hasOwnProperty('name'));
+
+        })
+        .end((error) => { error ? done.fail(error) : done() })
+    });
   })
 });
 
