@@ -23,7 +23,7 @@ describe('Servidor PLANTILLA:', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(function (res) {
-          //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
+          console.log( res.body ); // Para comprobar qué contiene exactamente res.body
           assert(res.body.hasOwnProperty('mensaje'));
           assert(res.body.mensaje === "Microservicio MS Plantilla: home");
 
@@ -39,7 +39,9 @@ describe('Servidor PLANTILLA:', () => {
           //console.log( "BODY ACERCA DE ", res.body ); // Para comprobar qué contiene exactamente res.body
           assert(res.body.hasOwnProperty('mensaje'));
           assert(res.body.mensaje === "Microservicio MS Plantilla: acerca de");
-
+          assert(res.body.autor === "Pablo García del Moral");
+          assert(res.body.email === "pgm00057@red.ujaen.es");
+          assert(res.body.fecha === "14/03/2023");
         })
         .end((error) => { error ? done.fail(error) : done() })
     });
@@ -55,9 +57,9 @@ describe('Servidor PLANTILLA:', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(function (res) {
-          //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
-          assert(res.body.data[0].data.hasOwnProperty('¿¿¿ PROPIEDAD ???'));
-          assert(res.body.data[0].data.nombre === "¿¿¿ VALOR ESPERADO ???");
+          //console.log( res.body.data[0].data.name ); // Para comprobar qué contiene exactamente res.body
+          assert(res.body.data[0].data.hasOwnProperty('name'));
+          assert(res.body.data[0].data.name === "Javier Fernandez");
 
         })
         .end((error) => { error ? done.fail(error) : done(); }
