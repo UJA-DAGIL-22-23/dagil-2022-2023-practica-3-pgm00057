@@ -93,20 +93,20 @@ Plantilla.mostrarAcercaDe = function (datosDescargados) {
 }
 
 Plantilla.mostrarGetPersonas = function (datosDescargados) {
+    let mensajeAMostrar = "<div>";
 
-    const mensajeAMostrar = `<div>
-    <ul>
-        <li><b>Nombre</b>: ${datosDescargados.data[0].data.name}</li>
-        <li><b>Pais</b>: ${datosDescargados.data[0].data.country}</li>
-        <li><b>Club</b>: ${datosDescargados.data[0].data.club}</li>
-        <li><b>Años Victorias</b>: ${datosDescargados.data[0].data.yearsWin}</li>
-        <li><b>Particiacion</b>: ${datosDescargados.data[0].data.participation}</li>
-        <li><b>Veces Olimpico/a</b>: ${datosDescargados.data[0].data.timesOlimpic}</li>
-    </ul>
-    </div>
-    `;
-    Frontend.Article.actualizar("Plantilla Acerca de", mensajeAMostrar)
+    for (let i = 0; i < datosDescargados.data.length; i++) {
+        mensajeAMostrar += `
+            <ul>
+                <li><b>Nombre</b>: ${datosDescargados.data[i].data.name}</li>
+            </ul>
+        `;
+    }
+
+    mensajeAMostrar += "</div>";
+    Frontend.Article.actualizar("Lista de Competidores", mensajeAMostrar);
 }
+
 
 
 /**
