@@ -46,7 +46,12 @@ describe('API Gateway: rutas estáticas', () => {
         .expect('Content-Type', /json/)
         .expect(function (res) {
           //console.log( res.body.data ); // Para comprobar qué contiene exactamente res.body.data
+          
+          //Recepcion nombre de MS
           assert(res.body.data[0].data.hasOwnProperty('name'));
+
+          //Recepcion equipo de MS
+          assert(res.body.data[0].data.hasOwnProperty('club'));
 
         })
         .end((error) => { error ? done.fail(error) : done() })
