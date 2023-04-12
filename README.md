@@ -15,6 +15,20 @@ Key: fnAE-85iN0AAzP2jHvqwnZZ6KKjIiNFmVLwUll-K
 *Coleccion*
 <img src='assets/capturas/coleccionFauna.png' withd='200px'>
 
+## Primer Incremento
+
+*Trello*
+<img src='assets/capturas/trello_1_1.png' withd='200px'>
+<img src='assets/capturas/trello_1_2.png' withd='200px'>
+
+*HU Realizadas*
+En este primer incremento he realizado las HU 01, 02 y 03. Estas consisten en cambiar la info de Acerca De,
+mostrar un listado de competidores y mostrar un listado de competidores ordenado alfabeticamente.
+
+<img src='assets/capturas/evidencia01.png' withd='200px'>
+<img src='assets/capturas/evidencia02.png' withd='200px'>
+<img src='assets/capturas/evidencia03.png' withd='200px'>
+
 ## Documentos creados en Fauna:
 {
   "ref": Ref(Collection("Competidores"), "358542902268264653"),
