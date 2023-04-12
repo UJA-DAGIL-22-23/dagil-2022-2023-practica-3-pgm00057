@@ -92,6 +92,9 @@ Plantilla.mostrarAcercaDe = function (datosDescargados) {
     Frontend.Article.actualizar("Plantilla Acerca de", mensajeAMostrar)
 }
 
+/**
+ * Funcion para mostrar lista de personas.
+ */
 Plantilla.mostrarGetPersonas = function (datosDescargados) {
     let mensajeAMostrar = "<div>";
 
@@ -107,6 +110,9 @@ Plantilla.mostrarGetPersonas = function (datosDescargados) {
     Frontend.Article.actualizar("Lista de Competidores", mensajeAMostrar);
 }
 
+/**
+ * Funcion para mostrar las personas ordenadas alfabeticamente.
+ */
 Plantilla.mostrarGetPersonasOrd = function (datosDescargados) {
     // Ordenar el arreglo de datos por nombre
     datosDescargados.data.sort((a, b) => a.data.name.localeCompare(b.data.name));
