@@ -107,6 +107,24 @@ Plantilla.mostrarGetPersonas = function (datosDescargados) {
     Frontend.Article.actualizar("Lista de Competidores", mensajeAMostrar);
 }
 
+Plantilla.mostrarGetPersonasOrd = function (datosDescargados) {
+    // Ordenar el arreglo de datos por nombre
+    datosDescargados.data.sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+    let mensajeAMostrar = "<div>";
+
+    for (let i = 0; i < datosDescargados.data.length; i++) {
+        mensajeAMostrar += `
+            <ul>
+                <li><b>Nombre</b>: ${datosDescargados.data[i].data.name}</li>
+            </ul>
+        `;
+    }
+
+    mensajeAMostrar += "</div>";
+    Frontend.Article.actualizar("Lista de Competidores Ordenada Alfabeticamente", mensajeAMostrar);
+}
+
 
 
 /**
@@ -130,4 +148,10 @@ Plantilla.procesarGetPersonas = function() {
     this.descargarRuta("/plantilla/getPersonas", this.mostrarGetPersonas);
 }
 
+/**
+ * Funcion para listar a los equipos.
+ */
+Plantilla.procesarGetEquipos = function() {
+    this.descargarRuta("/plantilla/getPersonas", this.mostrarGetPersonasOrd);
+}
 
