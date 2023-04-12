@@ -157,7 +157,7 @@ Plantilla.procesarGetPersonas = function() {
 /**
  * Funcion para listar a los equipos.
  */
-Plantilla.procesarGetPeronasOrd = function() {
+Plantilla.procesarGetPersonasOrd = function() {
     this.descargarRuta("/plantilla/getPersonas", this.mostrarGetPersonasOrd);
 }
 
