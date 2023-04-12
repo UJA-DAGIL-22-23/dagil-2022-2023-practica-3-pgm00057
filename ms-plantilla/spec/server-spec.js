@@ -58,8 +58,14 @@ describe('Servidor PLANTILLA:', () => {
         .expect('Content-Type', /json/)
         .expect(function (res) {
           //console.log( res.body.data[0].data.name ); // Para comprobar qué contiene exactamente res.body
+          
+          //Obtencion nombre desde base de datos correctamente.
           assert(res.body.data[0].data.hasOwnProperty('name'));
           assert(res.body.data[0].data.name === "Javier Fernandez");
+
+          //Obtencion equipo desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('club'));
+          assert(res.body.data[0].data.club === "Club Piragüismo Pontevedra");
 
         })
         .end((error) => { error ? done.fail(error) : done(); }
@@ -78,7 +84,7 @@ describe('Servidor PLANTILLA:', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(function (res) {
-          console.log( res.body.data )
+          //console.log( res.body.data )
           assert(res.body.data[0].data.hasOwnProperty('name'));
         })
         .end((error) => { error ? done.fail(error) : done(); }
