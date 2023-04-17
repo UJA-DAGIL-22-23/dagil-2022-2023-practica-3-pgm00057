@@ -49,9 +49,11 @@ describe('API Gateway: rutas estáticas', () => {
           
           //Recepcion nombre de MS
           assert(res.body.data[0].data.hasOwnProperty('name'));
+          assert(res.body.data[0].data.name === "Javier Fernandez");
 
           //Recepcion equipo de MS
           assert(res.body.data[0].data.hasOwnProperty('club'));
+          assert(res.body.data[0].data.club === "Club Piragüismo Pontevedra");
 
         })
         .end((error) => { error ? done.fail(error) : done() })
