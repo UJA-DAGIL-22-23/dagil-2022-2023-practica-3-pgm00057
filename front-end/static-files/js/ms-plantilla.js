@@ -131,7 +131,44 @@ Plantilla.mostrarGetPersonasOrd = function (datosDescargados) {
     Frontend.Article.actualizar("Lista de Competidores Ordenada Alfabeticamente", mensajeAMostrar);
 }
 
+/**
+ * Funcion para mostrar lista de personas.
+ */
+Plantilla.mostrarGetTodosDatos = function (datosDescargados) {
+    let mensajeAMostrar = "<div>";
+    mensajeAMostrar += `<table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha de nacimiento</th>
+                                    <th>País</th>
+                                    <th>Club</th>
+                                    <th>Participaciones</th>
+                                    <th>Años ganados</th>
+                                    <th>Veces olímpico</th>
+                                </tr>
+                            </thead>
+                            <tbody>`;
 
+    for (let i = 0; i < datosDescargados.data.length; i++) {
+        mensajeAMostrar += `
+                        <tr>
+                            <td>${datosDescargados.data[i].data.name}</td>
+                            <td>${datosDescargados.data[i].data.birthdate.day}/${datosDescargados.data[i].data.birthdate.month}/${datosDescargados.data[i].data.birthdate.year}</td>
+                            <td>${datosDescargados.data[i].data.country}</td>
+                            <td>${datosDescargados.data[i].data.club}</td>
+                            <td>${datosDescargados.data[i].data.participacion}</td>
+                            <td>${datosDescargados.data[i].data.yearsWin}</td>
+                            <td>${datosDescargados.data[i].data.timesOlimpic}</td>
+                        </tr>
+        `;
+    }
+
+    mensajeAMostrar += `</tbody>
+	                    </table>`;
+    mensajeAMostrar += "</div>";
+    Frontend.Article.actualizar("Datos de Todos los Competidores", mensajeAMostrar);
+}
 
 /**
  * Función principal para responder al evento de elegir la opción "Home"
