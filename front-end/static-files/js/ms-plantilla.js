@@ -161,3 +161,9 @@ Plantilla.procesarGetPersonasOrd = function() {
     this.descargarRuta("/plantilla/getPersonas", this.mostrarGetPersonasOrd);
 }
 
+/**
+ * Funcion para listar todos los datos de cada persona.
+ */
+Plantilla.procesarGetTodosDatos = function() {
+    this.descargarRuta("/plantilla/getPersonas", this.mostrarGetTodosDatos);
+}
