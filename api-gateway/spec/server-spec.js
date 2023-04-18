@@ -51,9 +51,29 @@ describe('API Gateway: rutas estáticas', () => {
           assert(res.body.data[0].data.hasOwnProperty('name'));
           assert(res.body.data[0].data.name === "Javier Fernandez");
 
-          //Recepcion equipo de MS
+          //Obtencion nacimiento desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('birthdate'));
+          assert(res.body.data[0].data.birthdate.day === 12);
+
+          //Obtencion pais desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('country'));
+          assert(res.body.data[0].data.country === "España");
+
+          //Obtencion equipo desde base de datos correctamente.
           assert(res.body.data[0].data.hasOwnProperty('club'));
           assert(res.body.data[0].data.club === "Club Piragüismo Pontevedra");
+
+          //Obtencion años ganados desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('yearsWin'));
+          assert(res.body.data[0].data.yearsWin[0] === 2017);
+
+          //Obtencion participaciones desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('participation'));
+          assert(res.body.data[0].data.participation[0] === 2016);
+
+          //Obtencion participaciones olimpiadas desde base de datos correctamente.
+          assert(res.body.data[0].data.hasOwnProperty('timesOlimpic'));
+          assert(res.body.data[0].data.timesOlimpic === 1);
 
         })
         .end((error) => { error ? done.fail(error) : done() })
