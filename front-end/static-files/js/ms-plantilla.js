@@ -157,7 +157,7 @@ Plantilla.mostrarGetTodosDatos = function (datosDescargados) {
                             <td>${datosDescargados.data[i].data.birthdate.day}/${datosDescargados.data[i].data.birthdate.month}/${datosDescargados.data[i].data.birthdate.year}</td>
                             <td>${datosDescargados.data[i].data.country}</td>
                             <td>${datosDescargados.data[i].data.club}</td>
-                            <td>${datosDescargados.data[i].data.participacion}</td>
+                            <td>${datosDescargados.data[i].data.participation}</td>
                             <td>${datosDescargados.data[i].data.yearsWin}</td>
                             <td>${datosDescargados.data[i].data.timesOlimpic}</td>
                         </tr>
