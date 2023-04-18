@@ -35,6 +35,9 @@ mostrar un listado de competidores y mostrar un listado de competidores ordenado
 *Trello*
 <img src='assets/capturas/trello_2_1.png' withd='200px'>
 
+*HU Realizadas*
+<img src='assets/capturas/evidencia04.png' withd='200px'>
+
 ## Documentos creados en Fauna:
 {
   "ref": Ref(Collection("Competidores"), "358542902268264653"),
