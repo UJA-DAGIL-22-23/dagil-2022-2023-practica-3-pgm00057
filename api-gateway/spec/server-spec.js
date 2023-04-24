@@ -78,6 +78,20 @@ describe('API Gateway: rutas estáticas', () => {
         })
         .end((error) => { error ? done.fail(error) : done() })
     });
+
+    it('Devuelve una persona por su id.', (done) => {
+      supertest(app)
+        .get('/plantilla/getPorId/358542902268264653')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          //console.log( res.body.data ); // Para comprobar qué contiene exactamente res.body.data
+
+          assert(res.body.data.name === "Javier Fernandez");
+        })
+        .end((error) => { error ? done.fail(error) : done() })
+    });
+
   })
 });
 
