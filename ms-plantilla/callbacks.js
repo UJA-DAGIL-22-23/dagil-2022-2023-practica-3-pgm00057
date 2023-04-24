@@ -79,6 +79,20 @@ const CB_MODEL_SELECTS = {
         } catch (error) {
             CORS(res).status(500).json({ error: error.description })
         }
+    },
+
+    getPorId: async (req, res) => {
+        try {
+            
+            let personas = await client.query(
+                q.Get(q.Ref(q.Collection(COLLECTION), req.params.idPersona))
+            )
+
+            CORS(res).status(200).json(personas)
+
+        } catch (error) {
+            CORS(res).status(500).json({ error: error.description })
+        }
     }
 
 }

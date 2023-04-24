@@ -57,7 +57,7 @@ describe('Servidor PLANTILLA:', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(function (res) {
-          //console.log( res.body.data[0].data.name ); // Para comprobar qué contiene exactamente res.body
+        //console.log( res.body ); // Para comprobar qué contiene exactamente res.body
           
           //Obtencion nombre desde base de datos correctamente.
           assert(res.body.data[0].data.hasOwnProperty('name'));
@@ -90,6 +90,19 @@ describe('Servidor PLANTILLA:', () => {
         })
         .end((error) => { error ? done.fail(error) : done(); }
         );
+    });
+
+    it('Devuelve una persona por su id.', (done) => {
+      supertest(app)
+        .get('/getPorId/358542902268264653')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          //console.log( res.body ); // Para comprobar qué contiene exactamente res.body.data
+
+          assert(res.body.data.name === "Javier Fernandez");
+        })
+        .end((error) => { error ? done.fail(error) : done() })
     });
 
   })
