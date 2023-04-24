@@ -122,7 +122,6 @@ Plantilla.mostrarGetPersonas = function (datosDescargados) {
         mensajeAMostrar += `
             <ul>
             <li><a href="javascript:Plantilla.procesarGetPersonaId(${datosDescargados.data[i].ref['@ref'].id})">${datosDescargados.data[i].data.name}</a></li>
-            <li>${datosDescargados.data[i].ref['@ref'].id}</li>
             </ul>
         `;
     }

@@ -34,8 +34,13 @@ mostrar un listado de competidores y mostrar un listado de competidores ordenado
 
 *Trello*
 <img src='assets/capturas/trello_2_1.png' withd='200px'>
+<img src='assets/capturas/trello_2_2.png' withd='200px'>
+
 
 *HU Realizadas*
+En este segundo incremento solo he podido realizar correctamente la HU 04. La HU 05 la he intentado pero a la hora
+de descargar los datos de una persona en front-end me da error al conectar con API-Gateway, esta funcion la queria implementar en 
+Lista Persona que al hacer click en un nombre te mostrara todos los datos de dicha persona.
 <img src='assets/capturas/evidencia04.png' withd='200px'>
 
 ## Documentos creados en Fauna:
