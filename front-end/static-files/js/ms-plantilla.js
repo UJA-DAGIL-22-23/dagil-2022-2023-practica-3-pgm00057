@@ -46,6 +46,26 @@ Plantilla.descargarRuta = async function (ruta, callBackFn) {
     }
 }
 
+Plantilla.recuperaUnaPersona = async function (idPersona, callBackFn) {
+    try {
+        const url = Frontend.API_GATEWAY + "/plantilla/getPorId/" + idPersona
+        const response = await fetch(url);
+        if (response) {
+            const persona = await response.json()
+            callBackFn(persona)
+        }
+    } catch (error) {
+        alert("Error: No se han podido acceder al API Gateway")
+        console.error(error)
+    }
+}
+
+
+let posicion = 0;
+
+function guardarPosicion(pos) {
+    posicion = pos;
+}
 
 /**
  * Función principal para mostrar los datos enviados por la ruta "home" de MS Plantilla
@@ -101,13 +121,45 @@ Plantilla.mostrarGetPersonas = function (datosDescargados) {
     for (let i = 0; i < datosDescargados.data.length; i++) {
         mensajeAMostrar += `
             <ul>
-                <li><b>Nombre</b>: ${datosDescargados.data[i].data.name}</li>
+            <li><a href="javascript:Plantilla.procesarGetPersonaId(${datosDescargados.data[i].ref['@ref'].id})">${datosDescargados.data[i].data.name}</a></li>
+            <li>${datosDescargados.data[i].ref['@ref'].id}</li>
             </ul>
         `;
     }
 
     mensajeAMostrar += "</div>";
     Frontend.Article.actualizar("Lista de Competidores", mensajeAMostrar);
+}
+
+
+Plantilla.mostrarTodoPersona = function (persona) {
+    let mensajeAMostrar = "<div>";
+    mensajeAMostrar += `<table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha de nacimiento</th>
+                                    <th>País</th>
+                                    <th>Club</th>
+                                    <th>Participaciones</th>
+                                    <th>Años ganados</th>
+                                    <th>Veces olímpico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>${persona.data.name}</td>
+                            <td>${persona.data.birthdate.day}/${persona.data.birthdate.month}/${persona.data.birthdate.year}</td>
+                            <td>${persona.data.country}</td>
+                            <td>${persona.data.club}</td>
+                            <td>${persona.data.participation}</td>
+                            <td>${persona.data.yearsWin}</td>
+                            <td>${persona.data.timesOlimpic}</td>
+                            </tr>
+                            </tbody>
+	                    </table>`;
+    mensajeAMostrar += "</div>";
+    Frontend.Article.actualizar("Todos los Datos", mensajeAMostrar);
 }
 
 /**
@@ -153,7 +205,7 @@ Plantilla.mostrarGetTodosDatos = function (datosDescargados) {
     for (let i = 0; i < datosDescargados.data.length; i++) {
         mensajeAMostrar += `
                         <tr>
-                            <td>${datosDescargados.data[i].data.name}</td>
+                        <td><a href="javascript:Plantilla.procesarGetTodosDatosOrd('${datosDescargados.data[i].data.name}')">${datosDescargados.data[i].data.name}</a></td>
                             <td>${datosDescargados.data[i].data.birthdate.day}/${datosDescargados.data[i].data.birthdate.month}/${datosDescargados.data[i].data.birthdate.year}</td>
                             <td>${datosDescargados.data[i].data.country}</td>
                             <td>${datosDescargados.data[i].data.club}</td>
@@ -203,4 +255,12 @@ Plantilla.procesarGetPersonasOrd = function() {
  */
 Plantilla.procesarGetTodosDatos = function() {
     this.descargarRuta("/plantilla/getPersonas", this.mostrarGetTodosDatos);
+}
+
+/**
+ * Funcion para listar todos los datos de cada persona.
+ */
+Plantilla.procesarGetPersonaId = function (idPersona) {
+    console.log(idPersona);
+    this.recuperaUnaPersona(idPersona, this.mostrarTodoPersona);
 }
